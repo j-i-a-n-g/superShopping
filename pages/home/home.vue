@@ -1,5 +1,8 @@
 <template>
   <view>
+    <view class="home-search">
+      <my-search @search="goToSearch"></my-search>
+    </view>
     <!-- 轮播图 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="2000" :duration="1000" circular="true" indicator-color="#999" indicator-active-color="white">
       <swiper-item v-for="(item, index) in swiperList" :key="index">
@@ -85,7 +88,13 @@
          })
        })
        this.floorList = data.message
-     }
+     },
+    // 跳转到搜索页面
+    goToSearch() {
+      uni.navigateTo({
+        url: '/subpkg/search/search'
+      })
+    }
     }
   }
 </script>
@@ -125,5 +134,10 @@ swiper {
       }
     }
   }
+}
+.home-search {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 </style>

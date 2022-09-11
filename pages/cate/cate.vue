@@ -1,4 +1,6 @@
 <template>
+  <view>
+  <my-search @search="goToSearch"></my-search>
   <view class="cate">
     <!-- 左侧滑动区 -->
     <scroll-view class="cate-left" scroll-y="true" :style="{height: scrollHeight + 'px'}">
@@ -18,6 +20,7 @@
        </view>
      </block>
    </scroll-view> 
+  </view>
   </view>
 </template>
 
@@ -40,7 +43,7 @@
       // 获取滚动区域高度
       async getSystemHeight() {
         const result = await uni.getSystemInfo()
-        this.scrollHeight = result[1].screenHeight
+        this.scrollHeight = result[1].windowHeight - 60
       },
       // 获取左侧列表数据
       async getCateList() {
@@ -58,6 +61,12 @@
       goToGoodsList(id) {
         uni.navigateTo({
           url: '/subpkg/goods_list/goods_list?cid=' + id
+        })
+      },
+      // 搜索
+      goToSearch() {
+        uni.navigateTo({
+          url: '/subpkg/search/search'
         })
       }
     }
