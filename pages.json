@@ -50,8 +50,7 @@
                 } }
                 ,{
                     "path" : "goods_list/goods_list",
-                    "style" :                                                                                    
-                {
+                    "style" :{
                     "navigationBarTitleText": "",
                     "enablePullDownRefresh": false
                 }
@@ -59,8 +58,7 @@
                 }
                 ,{
                     "path" : "search/search",
-                    "style" :                                                                                    
-                {
+                    "style" : {
                     "navigationBarTitleText": "",
                     "enablePullDownRefresh": false
                 }
