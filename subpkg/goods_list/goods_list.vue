@@ -71,7 +71,7 @@
           this.isLoading = true
           const { data } = await uni.$http.get('/api/public/v1/goods/search', this.queryObj)
             if (data.meta.status !== 200) return uni.$showMsg()
-            console.log(data.message.goods)
+            // console.log(data.message.goods)
             this.goodsList = this.goodsList.concat(...data.message.goods)
             this.total = data.message.total
             this.pagenum = data.message.pagenum
