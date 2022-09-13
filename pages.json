@@ -55,17 +55,12 @@
                     "enablePullDownRefresh": true,
                     "backgroundColor": "#F8F8F8",
                     "onReachBottomDistance": 150
-                }
-                
-                }
-                ,{
+                }},{
                     "path" : "search/search",
                     "style" : {
                     "navigationBarTitleText": "",
                     "enablePullDownRefresh": false
-                }
-                
-                }
+                }}
             ]
     }
   ]

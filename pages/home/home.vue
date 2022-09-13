@@ -43,7 +43,9 @@
 </template>
 
 <script>
+  import tabge from '@/mixins/tabbar-badge.js'
   export default {
+    mixins: [tabge],
     data() {
       return {
         swiperList: [],
